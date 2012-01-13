@@ -39,6 +39,9 @@ set foldopen=block,hor,insert,jump,mark,percent,quickfix,search,tag,undo
 set nobackup
 set noswapfile
 
+" Powerline configuration
+let Powerline_symbols='unicode'
+
 " Python configuration
 autocmd filetype python set expandtab
 autocmd filetype python set tabstop=4
