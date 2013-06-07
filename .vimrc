@@ -1,13 +1,21 @@
-if $SHELL =~ 'bin/fish'
-	set shell=/bin/bash
-endif
-
 set nocompatible
+filetype off
 
-" Use pathogen to easily modify the runtime path to include all plugins under the ~/.vim/bundle
-" directory
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-powerline'
+Bundle "motus/pig.vim"
+
 
 let mapleader=","
 
