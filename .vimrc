@@ -14,7 +14,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
-Bundle "motus/pig.vim"
+Bundle 'vim-scripts/pig.vim'
 
 
 let mapleader=","
@@ -61,9 +61,9 @@ autocmd filetype ruby set tabstop=2
 autocmd filetype ruby set shiftwidth=2
 
 " Pig configuration
-augroup filetypedetect
-  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
-augroup END
+"augroup filetypedetect
+"  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+"augroup END
 
 " set filetype stuff to on
 filetype on
