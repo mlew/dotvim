@@ -12,6 +12,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kevinw/pyflakes-vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'ervandew/supertab'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/pig.vim'
@@ -54,6 +55,9 @@ let Powerline_symbols='unicode'
 autocmd filetype python set expandtab
 autocmd filetype python set tabstop=4
 autocmd filetype python set shiftwidth=4
+
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_check_on_open=1
 
 " Ruby configuration
 autocmd filetype ruby set expandtab
