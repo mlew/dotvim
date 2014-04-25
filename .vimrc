@@ -1,22 +1,22 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/closetag.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'ervandew/supertab'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/pig.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/closetag.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kevinw/pyflakes-vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'ervandew/supertab'
 
+call vundle#end()
+filetype plugin indent on
 
 let mapleader=","
 
@@ -25,13 +25,13 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set nowrap                        " don't wrap lines
-set tabstop=4                     " a tab is 4 space
+set tabstop=2                     " a tab is 2 space
 set expandtab                     " expand tabs to spaces
 set backspace=indent,eol,start    " allow backspacing over everything in insert mode
 set autoindent                    " always set autoindenting on
 set copyindent                    " copy the previous indentation on autoindenting
 set number                        " always show line numbers
-set shiftwidth=4                  " use multiple of shiftwidth when indenting with '<' and '>'
+set shiftwidth=2                  " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch                     " set show matching parenthesis
 set ignorecase                    " ignore case when searching
 set smartcase                     " ignore case if search pattern is all lowercase, case-insensitive otherwise
@@ -39,7 +39,7 @@ set smarttab                      " insert tabs on the start of a line according
 set hlsearch                      " highlight search terms
 set incsearch                     " show search matches as you type
 set scrolloff=4                   " keep 4 lines off the edges of the screen when scrolling
-set textwidth=120                 " sets the default width to 120 characters
+set textwidth=80                  " sets the default width to 80 characters
 set foldenable
 set foldcolumn=2
 set foldmethod=marker
@@ -49,7 +49,10 @@ set nobackup
 set noswapfile
 
 " Powerline configuration
-let Powerline_symbols='unicode'
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+"let Powerline_symbols='unicode'
 
 " Python configuration
 autocmd filetype python set expandtab
